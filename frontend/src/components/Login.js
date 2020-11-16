@@ -26,7 +26,7 @@ class Login extends Component {
     }
 
     iniciarSesion=async()=>{
-        await axios.get(baseUrl, {params: {username: this.state.form.username, password: md5(this.state.form.password)}})
+        await axios.get(baseUrl, {params: {username: this.state.form.username, password: this.state.form.password}})
         .then(response=>{
             return response.data;
         })
@@ -61,6 +61,16 @@ class Login extends Component {
         return (
     <div className="containerPrincipal">
         <div className="containerSecundario">
+        <img
+            class="mb-4"
+            src="./imgP/logo.png"
+            alt=""
+            width="100"
+            height="100"
+          />
+        <h1 class="h3 mb-3 font-weight-normal">
+            Inicio de sesión
+          </h1>
           <div className="form-group">
             <label>Usuario: </label>
             <br />
