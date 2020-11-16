@@ -4,33 +4,67 @@ import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
 class Menu extends Component {
-    cerrarSesion=()=>{
-        cookies.remove('id', {path: "/"});
-        cookies.remove('apellido_paterno', {path: "/"});
-        cookies.remove('apellido_materno', {path: "/"});
-        cookies.remove('nombre', {path: "/"});
-        cookies.remove('username', {path: "/"});
-        window.location.href='./';
+    cerrarSesion = () => {
+        cookies.remove('id', { path: "/" });
+        cookies.remove('apellido_paterno', { path: "/" });
+        cookies.remove('apellido_materno', { path: "/" });
+        cookies.remove('nombre', { path: "/" });
+        cookies.remove('username', { path: "/" });
+        window.location.href = './';
     }
 
     componentDidMount() {
-        if(!cookies.get('username')){
-            window.location.href="./";
+        if (!cookies.get('username')) {
+            window.location.href = "./";
         }
     }
 
     render() {
-        console.log('id: '+ cookies.get('id'));
-        console.log('apellido_paterno: '+cookies.get('apellido_paterno'));
-        console.log('apellido_materno: '+cookies.get('apellido_materno'));
-        console.log('nombre: '+cookies.get('nombre'));
-        console.log('username: '+cookies.get('username'));
+        console.log('id: ' + cookies.get('id'));
+        console.log('apellido_paterno: ' + cookies.get('apellido_paterno'));
+        console.log('apellido_materno: ' + cookies.get('apellido_materno'));
+        console.log('nombre: ' + cookies.get('nombre'));
+        console.log('username: ' + cookies.get('username'));
         return (
             <div>
                 Menu Principal
 
                 <br />
-                <button onClick={()=>this.cerrarSesion()}>Cerrar Sesión</button>
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Dropdown
+        </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <button class="btn btn-outline-success my-2 my-sm-0" onClick={() => this.cerrarSesion()}>Cerrar Sesión</button>
+                        </form>
+                    </div>
+                </nav>
             </div>
         );
     }

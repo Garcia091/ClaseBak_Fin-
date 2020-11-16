@@ -71,7 +71,21 @@ router.get('/usuario',(req,res)=>{
   })
 }) 
 
+router.post('/usuario', (req, res) => {
+  const {username,password} = req.body
+  let tipo = [username,password];
 
+  mysqlConnection.query('SELECT * FROM usuario',
+  (err,rows,fields)=>{
+    if(!err)
+   {
+     res.json(rows);
+   }else{
+     console.log(err);
+   }
+  })
+;
+});
 
 
 

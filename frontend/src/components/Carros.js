@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Table,Button,Container,Modal,ModalHeader,ModalBody,FormGroup,ModalFooter,
 } from "reactstrap";
 
+import Menu from './Menu'
+
 const url = "http://localhost:5000/api/carro/";
 
 class Carros extends React.Component {
@@ -106,6 +108,7 @@ class Carros extends React.Component {
     const {form}=this.state;
     return (
       <div className="App">
+        <Menu/>
         <br/>
         <button className="btn btn-success" onClick={()=>{this.setState({form: null, tipoModal:'insertar'});this.modalInsertar()}}>Agregar Carro</button>
         <br/><br/>

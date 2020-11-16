@@ -23,6 +23,7 @@ class Login extends Component {
                 [e.target.name]: e.target.value
             }
         });
+        console.log(this.state.form)
     }
 
     iniciarSesion=async()=>{
@@ -51,11 +52,15 @@ class Login extends Component {
     }
 
     componentDidMount() {
-        if(cookies.get('username')){
-            window.location.href="./menu";
+        if(cookies.get('username')&& cookies.get('password')){
+            window.location.href="./app";
         }
     }
-    
+
+    CrearCuenta() {
+            window.location.href="./registro";  
+    }
+
 
     render() {
         return (
@@ -90,7 +95,8 @@ class Login extends Component {
               onChange={this.handleChange}
             />
             <br />
-            <button className="btn btn-primary" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
+            <button className="btn btn-primary btn-lg btn-block" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
+            <button className="btn btn-success btn-lg btn-block" onClick={()=> this.CrearCuenta()}>Crear cuenta</button>
           </div>
         </div>
       </div>
