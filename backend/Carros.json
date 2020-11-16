@@ -1,0 +1,42 @@
+{
+  "result": [
+    {
+      "id": 1,
+      "PLACA": "A11D23",
+      "MARCA": "QWEQWE",
+      "MODELO": "LEÓN",
+      "DOC_DUENIO": "1232342"
+    },
+    {
+      "id": 2,
+      "PLACA": "E19D",
+      "MARCA": "REANULT",
+      "MODELO": "MEGANE",
+      "DOC_DUENIO": "ALEXANDRA",
+      "IMG": "https://img1.freepng.es/20180703/rlz/kisspng-2016-audi-a4-volkswagen-car-2014-audi-a4-autos-clasicos-5b3c36db46b9b9.1247055015306728592897.jpg"
+    },
+    {
+      "id": 3,
+      "PLACA": "G61",
+      "MARCA": "VOLKSWAGEN",
+      "MODELO": "ATECA",
+      "DOC_DUENIO": "SILVIA García",
+      "IMG": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7C3H65GcZ7wzrklAfAGjFVnV0gsQI7R8EXQ&usqp=CAU"
+    },
+    {
+      "id": 4,
+      "PLACA": "GG11D",
+      "MARCA": "NISSAN",
+      "MODELO": "MCRA",
+      "DOC_DUENIO": "CARLOS",
+      "IMG": ""
+    },
+    {
+      "id": 5,
+      "PLACA": "GHJ1D",
+      "MARCA": "CITROEN",
+      "MODELO": "ATECA",
+      "DOC_DUENIO": "MATEO Garcia"
+    }
+  ]
+}

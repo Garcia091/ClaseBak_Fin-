@@ -2,13 +2,13 @@ import React from 'react';
 import axios from 'axios'; //Compartir resurcos entre servidores
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; //usar iconos en React
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Table,Button,Container,Modal,ModalHeader,ModalBody,FormGroup,ModalFooter,
 } from "reactstrap";
 
 const url = "http://localhost:5000/api/carro/";
 
-class App extends React.Component {
+class Carros extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -190,4 +190,4 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+export default Carros;
